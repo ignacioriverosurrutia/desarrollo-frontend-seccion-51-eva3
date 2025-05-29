@@ -5,6 +5,7 @@ import Footer from './components/footer'; // Importa el pie de página
 import Home from './pages/home'; // Importa la página de inicio
 import Productos from './pages/productos'; // Importa la página de productos
 import Contacto from './pages/contacto'; // Importa la página de contacto
+import ImagenCargada from '../components/ImagenCargada.jsx'; // Importa el componente de imagen cargada
 
 const App = () => {
   return (
