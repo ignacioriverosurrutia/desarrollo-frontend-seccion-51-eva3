@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'; // Importa React
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa componentes de enrutamiento
+import Header from './components/Header'; // Importa el encabezado
+import Footer from './components/footer'; // Importa el pie de página
+import Home from './pages/home'; // Importa la página de inicio
+import Productos from './pages/productos'; // Importa la página de productos
+import Contacto from './pages/contacto'; // Importa la página de contacto
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      {/* Encabezado visible en todas las páginas */}
+      <Header />
+      {/* Definición de rutas de la aplicación */}
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Ruta para la página de inicio */}
+        <Route path="/productos" element={<Productos />} /> {/* Ruta para productos */}
+        <Route path="/contacto" element={<Contacto />} /> {/* Ruta para contacto */}
+      </Routes>
+      {/* Pie de página visible en todas las páginas */}
+      <Footer />
+    </Router>
+  );
+};
 
-export default App
+export default App; // Exporta el componente principal de la app

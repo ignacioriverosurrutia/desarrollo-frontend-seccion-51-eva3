@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Lana Merino Natural",
+    "description": "Lana suave 100% natural ideal para invierno.",
+    "image": "https://via.placeholder.com/300x200"
+  },
+  {
+    "id": 2,
+    "title": "Vellón de Colores",
+    "description": "Ideal para trabajos de fieltro y bordado.",
+    "image": "https://via.placeholder.com/300x200"
+  }
+]
